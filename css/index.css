@@ -42,13 +42,14 @@
 }
 
 .score {
-    display: none;
+    display: block;
     position: absolute;
     left: 50%;
     top: 0;
     transform: translateX(-50%);
     color: #fff;
     font-weight: bolder;
+    z-index: 2;
 }
 
 .mask {
@@ -60,6 +61,7 @@
     right: 0;
     opacity: .7;
     background-color: #000;
+    z-index: 2;
 }
 
 .end {
@@ -69,6 +71,7 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    z-index: 3;
 }
 
 .end .over {
@@ -85,9 +88,13 @@
     font-size: 20px;
 }
 
+.end .restart {
+    cursor: pointer;
+}
+
 /*排行榜列表*/
 .end .rank-list {
-    margin-top: 20px;
+    margin-top: 15px;
     color: #09f;
 
 }
@@ -130,10 +137,16 @@
 .end .rank-time {
     font-style: 18px;
     color: #09f;
+    font-weight: bold;
+    cursor: pointer;
+}
+.end .restart{
+    margin-top: 15px;
+    color: #09f;
+    font-size: 18px;
     font-weight: bolder;
     cursor: pointer;
 }
-
 .pipe {
     position: absolute;
     width: 52px;
